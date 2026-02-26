@@ -9,6 +9,7 @@ import DeviceManagementCard from "../components/cards/DeviceManagementCard";
 import ProductivityReportCard from "../components/cards/ProductivityReportCard";
 import EmailSectionCard from "../components/cards/EmailSectionCard";
 import OnlineUsersCard from "../components/cards/OnlineUsersCard";
+import ActivityReportSection from "../components/cards/ActivityReportSection";
 import Sidebar from "../components/layout/Sidebar";
 import Topbar from "../components/layout/Topbar";
 import { ChevronDown, Cloud } from "lucide-react";
@@ -98,6 +99,7 @@ export default function Dashboard() {
               <ProductivityReportCard />
               <EmailSectionCard />
               <OnlineUsersCard />
+              <ActivityReportSection />
             </div>
           </SortableContainer>
         </div>
