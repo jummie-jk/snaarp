@@ -65,7 +65,7 @@ export default function StatBlockSortable({ className = "" }: Props) {
     <div
       ref={setNodeRef}
       style={blockStyle}
-      className={`relative bg-transparent min-h-0 ${isDragging ? "z-50 opacity-95" : ""} ${className}`}
+      className={`relative bg-transparent min-h-0 h-full flex flex-col ${isDragging ? "z-50 opacity-95" : ""} ${className}`}
     >
       <div
         {...blockAttributes}
@@ -86,9 +86,9 @@ export default function StatBlockSortable({ className = "" }: Props) {
           items={statCardOrder}
           strategy={rectSortingStrategy}
         >
-          <div className="grid grid-cols-2 gap-x-6 gap-y-4 h-24 min-h-0">
+          <div className="grid grid-cols-2 grid-rows-[1fr_1fr] gap-2 flex-1 min-h-0">
             {orderedStatWidgets.map((widget) => (
-              <DraggableItem key={widget.id} id={widget.id}>
+              <DraggableItem key={widget.id} id={widget.id} className="min-w-0 h-full min-h-0">
                 <StatCard
                   title={widget.title!}
                   value={widget.value!}

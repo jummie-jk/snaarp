@@ -43,7 +43,7 @@ export default function ActiveUsersCard() {
         </div>
       </div>
 
-      <div className="flex gap-4 flex-1 min-h-0 min-w-0">
+      <div className="flex gap-3 flex-1 min-h-0 min-w-0">
         <div className="relative flex-1 min-w-0 rounded-xl bg-gray-100 border border-gray-200 overflow-hidden min-h-[180px]">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 opacity-80" />
           <div className="absolute inset-0 flex items-center justify-center text-gray-400 pointer-events-none">

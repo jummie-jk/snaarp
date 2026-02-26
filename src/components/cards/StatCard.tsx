@@ -43,10 +43,10 @@ export default function StatCard({
 
   return (
     <div
-      className={`bg-white rounded-2xl p-5 shadow-sm border border-gray-100 min-w-0 ${className}`}
+      className={`bg-white rounded-2xl p-5 shadow-sm border border-gray-100 min-w-0 w-full h-full flex flex-col ${className}`}
     >
-      <div className="flex justify-between items-start gap-3">
-        <div className="min-w-0 flex-1">
+      <div className="flex flex-nowrap justify-between items-stretch">
+        <div className="min-w-0 flex-1 flex flex-col justify-center">
           <div className="flex items-center gap-2">
             <span className="text-gray-400 shrink-0">
               <Icon className="w-4 h-4" strokeWidth={1.5} />
@@ -55,7 +55,7 @@ export default function StatCard({
           </div>
 
           <div className="flex items-baseline gap-2 mt-3 flex-wrap">
-            <p className="text-2xl font-bold text-black tabular-nums">
+            <p className="text-sm font-semibold text-black tabular-nums">
               {typeof value === "number" ? value.toLocaleString() : value}
             </p>
             <span
@@ -75,7 +75,7 @@ export default function StatCard({
           <p className="text-xs text-gray-500 mt-1">{comparisonText}</p>
         </div>
 
-        <div className="w-20 h-9 shrink-0">
+        <div className="w-20 h-9 shrink-0 self-center">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart
               data={chartData.map((v, i) => ({ v, i }))}

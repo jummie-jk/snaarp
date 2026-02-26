@@ -25,7 +25,7 @@ export default function Dashboard() {
         <Topbar />
         <div className="p-6">
           <SortableContainer>
-            <div className="grid grid-cols-1 xl:grid-cols-4 xl:grid-rows-[auto_minmax(380px,1fr)] gap-6">
+            <div className="grid grid-cols-1 xl:grid-cols-4 xl:grid-rows-[auto_minmax(380px,1fr)] gap-3">
               {topLevelOrder.map((id, index) => {
                 const gridClass = GRID_CLASSES[index] ?? "";
 
@@ -33,7 +33,7 @@ export default function Dashboard() {
                   return (
                     <StatBlockSortable
                       key={STAT_BLOCK_ID}
-                      className={`min-h-0 ${gridClass}`}
+                      className={`h-full min-h-0 ${gridClass}`}
                     />
                   );
                 }
@@ -43,7 +43,7 @@ export default function Dashboard() {
                     <DraggableItem
                       key="5"
                       id="5"
-                      className={gridClass}
+                      className={`h-full min-h-0 ${gridClass}`}
                     >
                       <StorageCard />
                     </DraggableItem>
