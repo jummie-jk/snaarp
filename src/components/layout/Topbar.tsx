@@ -22,7 +22,7 @@ const TopBar: React.FC = () => {
         </button>
 
         <div className="w-auto p-2 h-9 rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-center relative text-gray-500 hover:bg-indigo-50 hover:text-indigo-600 transition">
-          <p>Agent Code: <span className="text-blue-500 font-semibold">0365jgibvfn37gj89</span></p>
+          <p className="text-sm">Agent Code: <span className="text-blue-500 font-semibold">0365jgibvfn37gj89</span></p>
           <div className="p-4">
               <Copy size={18} className="text-gray-500" />
           </div>

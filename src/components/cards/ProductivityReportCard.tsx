@@ -162,7 +162,7 @@ export default function ProductivityReportCard() {
 
   return (
     <div className="w-full">
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-4 bg-white rounded-2xl p-2 shadow-sm border border-gray-100">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-4 bg-white rounded-2xl p-2 shadow-sm border border-gray-100 mt-5">
         <div className="flex items-center gap-2">
           <span className="text-gray-500">
             <Presentation className="w-5 h-5" strokeWidth={1.5} />
@@ -192,7 +192,7 @@ export default function ProductivityReportCard() {
               const card = CARDS[id];
               if (!card) return null;
               return (
-                <DraggableItem key={id} id={id} className="min-w-0 h-[130px] min-h-0">
+                <DraggableItem key={id} id={id} className="min-w-0 h-[140px] min-h-0">
                   <ProductivityCard
                     id={id}
                     label={card.label}

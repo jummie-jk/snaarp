@@ -7,6 +7,8 @@ import ChartCard from "../components/cards/ChartCard";
 import ActiveUsersCard from "../components/cards/ActiveUsersCard";
 import DeviceManagementCard from "../components/cards/DeviceManagementCard";
 import ProductivityReportCard from "../components/cards/ProductivityReportCard";
+import EmailSectionCard from "../components/cards/EmailSectionCard";
+import OnlineUsersCard from "../components/cards/OnlineUsersCard";
 import Sidebar from "../components/layout/Sidebar";
 import Topbar from "../components/layout/Topbar";
 import { ChevronDown, Cloud } from "lucide-react";
@@ -91,9 +93,11 @@ export default function Dashboard() {
                 return null;
               })}
             </div>
-            <div className="mt-6 space-y-6">
+            <div className="mt-6 space-y-2">
               <DeviceManagementCard />
               <ProductivityReportCard />
+              <EmailSectionCard />
+              <OnlineUsersCard />
             </div>
           </SortableContainer>
         </div>
