@@ -71,6 +71,7 @@ export function DashboardProvider({
     { id: "5", type: "storage" },
     { id: "6", type: "chart" },
     { id: "7", type: "activeUsers" },
+    { id: "8", type: "deviceManagement" },
   ]);
 
   const [topLevelOrder, setTopLevelOrder] = useState<string[]>([

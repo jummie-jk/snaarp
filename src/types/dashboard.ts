@@ -1,4 +1,4 @@
-export type WidgetType = "stat" | "storage" | "chart" | "activeUsers";
+export type WidgetType = "stat" | "storage" | "chart" | "activeUsers" | "deviceManagement";
 
 export interface Widget {
   id: string;
