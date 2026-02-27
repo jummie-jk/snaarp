@@ -32,7 +32,7 @@ export default function DraggableItem({ id, children, className = "" }: Props) {
       <div
         {...attributes}
         {...listeners}
-        className="absolute top-2 right-2 z-10 p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 cursor-grab active:cursor-grabbing touch-none"
+        className="absolute top-2 right-2  z-10 p-1.5 m-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 cursor-grab active:cursor-grabbing touch-none"
         tabIndex={0}
         aria-label="Drag to reorder"
       >
