@@ -39,7 +39,7 @@ export default function DeviceStatCard({
   className = "",
 }: DeviceStatCardProps) {
   const isUp = trend === "up";
-  const chartColor = isUp ? "#22c55e" : "#ef4444";
+  const chartColor = "#22c55e"; // green for device management graph
   const chartData = isUp ? trendDataUp : trendDataDown;
 
   return (

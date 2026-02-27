@@ -73,7 +73,7 @@ function AppActivityCard() {
             <span className="text-gray-500">
               <Target className="w-4 h-4" strokeWidth={1.5} />
             </span>
-            <h2 className="text-base font-semibold text-gray-900">App Activity Report</h2>
+            <h2 className="text-base text-sm font-semibold text-gray-900">App Activity Report</h2>
           </div>
           <p className="text-sm text-gray-500 mt-1">View your comprehensive organizational app report.</p>
         </div>
@@ -143,7 +143,7 @@ function WebActivityCard() {
             <span className="text-gray-500">
               <Globe className="w-4 h-4" strokeWidth={1.5} />
             </span>
-            <h2 className="text-base font-semibold text-gray-900">Web Activity</h2>
+            <h2 className="font-semibold text-gray-900 text-sm">Web Activity</h2>
           </div>
           <p className="text-sm text-gray-500 mt-1">View your comprehensive organizational web report.</p>
         </div>

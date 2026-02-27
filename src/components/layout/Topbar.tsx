@@ -1,11 +1,22 @@
 import React from "react";
-import { Search, Bell, Copy } from "lucide-react";
+import { Search, Bell, Copy, Menu } from "lucide-react";
 
-const TopBar: React.FC = () => {
+interface TopBarProps {
+  onMenuClick?: () => void;
+}
+
+const TopBar: React.FC<TopBarProps> = ({ onMenuClick }) => {
   return (
-    <header className="h-16 bg-white border-b border-gray-200 flex items-center px-6 gap-4 sticky top-0 z-50">
-      
-      <div className="flex-1">
+    <header className="h-16 bg-white border-b border-gray-200 flex items-center px-4 sm:px-6 gap-4 sticky top-0 z-50">
+      <button
+        type="button"
+        onClick={onMenuClick}
+        aria-label="Open menu"
+        className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 shrink-0"
+      >
+        <Menu className="w-6 h-6" />
+      </button>
+      <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 max-w-105">
           <Search size={15} className="text-gray-400" />
           <input

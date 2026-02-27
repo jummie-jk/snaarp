@@ -12,7 +12,8 @@ import OnlineUsersCard from "../components/cards/OnlineUsersCard";
 import ActivityReportSection from "../components/cards/ActivityReportSection";
 import Sidebar from "../components/layout/Sidebar";
 import Topbar from "../components/layout/Topbar";
-import { ChevronDown, Cloud } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, Cloud, GripVertical } from "lucide-react";
 
 const GRID_CLASSES = [
   "xl:col-span-2 xl:row-start-1",
@@ -23,12 +24,17 @@ const GRID_CLASSES = [
 
 export default function Dashboard() {
   const { topLevelOrder } = useDashboard();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen">
-      <Sidebar />
-      <div className="flex-1 flex flex-col">
-        <Topbar />
+      <Sidebar
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+      <div className="hidden lg:block w-52 shrink-0" aria-hidden />
+      <div className="flex-1 flex flex-col min-w-0">
+        <Topbar onMenuClick={() => setSidebarOpen((v) => !v)} />
         <div className="p-6">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-4 bg-white rounded-xl p-2 shadow-sm border border-gray-100">
         <div className="flex items-center gap-2">
@@ -39,6 +45,9 @@ export default function Dashboard() {
             Cloud Network
           </h2>
         </div>
+        <h2 className="text-xs font-semibold text-red-600 flex items-center gap-1.5">
+          Please click the icon <GripVertical className="w-4 h-4 shrink-0" strokeWidth={2} /> to drag and drag horizontally
+        </h2>
         <ChevronDown className="w-4 h-4" strokeWidth={2} />
       </div>
           <SortableContainer>
